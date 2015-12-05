@@ -6,8 +6,7 @@ Post OTRS tickets to [Slack](https://slack.com/)
 
 set necessary variables
 ``` ruby
-WEBHOOK_URL => Slack [webook url](https://my.slack.com/services/new/incoming-webhook
-)
+WEBHOOK_URL => Slack webhook url from https://my.slack.com/services/new/incoming-webhook
 OTRS_HOST => your OTRS url
 HOST, USER, PASSWORD and DATABSE of the database used by OTRS
 ```
