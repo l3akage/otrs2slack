@@ -22,5 +22,7 @@ notifier.username = 'otrs'
 msg = "<#{OTRS_HOST}/index.pl?Action=AgentTicketZoom;TicketID=#{row['id']}|#{row['tn']}>"
 msg = "#{msg} New Ticket from #{row['customer_id']}: #{row['title']}"
 
+msg = Slack::Notifier::LinkFormatter.format(msg)
+
 notifier.ping(msg, icon_emoji: ':email:')
 client.close
